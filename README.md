@@ -1,12 +1,20 @@
 # NLP Web Scraper
 
-This project crawls websites, extracts metadata and performs sentiment analysis.
+## Setup Instructions
 
-## Features
-- Web crawling using requests & BeautifulSoup
-- Sentiment analysis using TextBlob
-- Named Entity Recognition with spaCy
-- REST API to access extracted data
+```bash
+python3 -m venv venv
+source venv/bin/activate  # or venv\Scripts\activate on Windows
+pip install -r requirements.txt
+python -m textblob.download_corpora
+python -m spacy download en_core_web_sm
 
-## Tech Stack
-Python, Flask, BeautifulSoup, spaCy, TextBlob, PostgreSQL
+# Set up PostgreSQL and create database
+# Update config.py with your DB credentials
+
+# Run the app
+python run.py
+```
+
+- Access UI at http://localhost:5000
+- Swagger Docs at http://localhost:5000/apidocs

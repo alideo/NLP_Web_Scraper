@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+<head><title>NLP Web Scraper</title></head>
+<body>
+  <h1>Analyze Website</h1>
+  <form method="post">
+    <input name="url" type="text" placeholder="Enter URL" required>
+    <input type="submit" value="Analyze">
+  </form>
+  {% if result %}
+  <h2>Result</h2>
+  <p><strong>Title:</strong> {{ result.title }}</p>
+  <p><strong>Sentiment:</strong> {{ result.sentiment }}</p>
+  <p><strong>Entities:</strong> {{ result.entities }}</p>
+  {% endif %}
+</body>
+</html>
